@@ -111,20 +111,42 @@ var str = people[0].name.first;
 return str;
 }
 //  Write a function that finds the average age of the people array.
+function averageAge(people){
+ 	var sum = people[0].age;
+	for (var i = 1 ; i < people.length ; i++){
+		sum = sum + people[i].age ;
+	}
+	return sum / people.length
+}
 //  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified age.
 //  Side Note: The women in the people array are all very famous. What did they do?
 //  Bonus Points: What is the name of the woman in the picture here?
-
+function older(people, age){
+	var olderPerson = [];
+		for (var i = 0 ; i < people.length ; i++){
+			if (age < people[i].age){
+				olderPerson.push(people[i].name.first)
+			}
+	}
+	return olderPerson;
+}
 // 13.The following object has a number of key/value pairs that need to be removed:
-//  var dirtyObject = {
-//        _fht: 192492,
-//        name: 'Yan Fan',
-//        age: 27,
-//        _byz: 939205,
-//        _ttrs: 510852
-//  }
-//  function clean(obj) {
-//  }
+ var dirtyObject = {
+       _fht: 192492,
+       name: 'Yan Fan',
+       age: 27,
+       _byz: 939205,
+       _ttrs: 510852
+ }
+ function clean(obj) {
+  	  for (var key in obj){
+     	 if(key[0] === "_"){
+       		 delete obj[key];
+     	 }
+      }
+    
+    return obj;
+ }
 //  clean(dirtyObject); // => {name: 'Yan Fan', age: 27}
 //  The function clean should accept an object as the argument and return a new object that has all of the key/value pairs of its parameter except for those that begin with _.
 
