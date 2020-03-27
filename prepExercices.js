@@ -1,26 +1,54 @@
 // Exercises
 // Basic Requirments
-// 1.Fix the syntax & style issues with the three objects below:
-//  {firstName 'Yan', lastname: 'Fan' }
-//  {a: 1, b:2 c: 3 d 4}
-//  {
-//        animal: 'dog'
-//        noise: 'bark',
-//        age: 3,
-//        type 'Golden Retriever'
-//        color: 'Yellow',
-//  }
+//1.Fix the syntax & style issues with the three objects below:
+{
+ 	firstName:'Yan',
+    lastname: 'Fan' 
+}
+
+{
+ 	a: 1,
+ 	b: 2,
+ 	c: 3,
+ 	d: 4
+}
+
+ {
+       animal: 'dog',
+       noise: 'bark',
+       age: 3,
+       type: 'Golden Retriever',
+       color: 'Yellow',
+ }
 
 // 2. Create an object that represents you. It should contain your first name, last name, age and hometown. Assign it to a variable called person.
-
+var person = {
+	firstName: "Hamza",
+	lastname:"Ouni",
+	age: 28,
+	hometown: "Grombalia"
+}
 // 3.Add three more key/value pairs to your object that represent other attributes of yourself. Ideas include (but are not limited to):
 //  Favorite TV Shows/Movies/Sports/Activities etc.
 //  Family
 //  Date of Birth
 //  Place of Birth
 
-// 4.Change your object to have a single name key, the value of which is an object – this object should have first, last and middle keys containing your first, last, and middle names respectively.
+person.favoriteSeries = "Breaking bad"
+person.favoriteTeam = "AC Milan"
+person.placeOfBirth = "Nabeul"
 
+// 4.Change your object to have a single name key, the value of which is an object – this object should have first, last and middle keys containing your first, last, and middle names respectively.
+ var person = {
+    "name": {
+         "firstName":"Hamza",
+         "middleName":"",
+         "lastName":"Ouni"
+      },
+    "homeTown":"Grombalia",
+    "age":28
+      
+   }
 // 5.Look up something you want to buy on souq.com, and make an object that represents information about the item:
 //  Item Name
 //  Category/Type
