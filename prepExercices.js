@@ -55,18 +55,24 @@ person.placeOfBirth = "Nabeul"
 //  Year released
 //  Rating
 //  Price
-
+var sunGlasses = {
+	"brand": "Ray-Ban",
+	"color": "black",
+	"rating": "5 star"
+	"price": "300€"
+}
 // 6.in the console,Create a new empty object in your console called obj like this:
 // var obj = {};
-
+var obj = {};
 // 7.Add a new key/value pair to the object obj by assigning a new value to a new key like so:
 //  obj.hello = 'world';
 //  obj['number'] = 25;
-
+obj.car ="Mercedes";
+obj["class"]= "s";
 // 8. Now, check the value of obj in the console and ensure that it has the two key/value pairs added above. This is how we create new key/value pairs in existing objects.
-
+      done
 // 9.In the console attached to your main.js file, add a favoriteColor key/value pair to the object that represents you.
-
+obj.favoriteColor= "black";
 // 10.Fix the attempts to access values in the person object:
 //  var key = 'name';
 //  var woman = {
@@ -74,25 +80,36 @@ person.placeOfBirth = "Nabeul"
 //        age: 85,
 //        occupation: 'computer scientist'
 //  };
-//  woman[age]; // => 85
-//  woman.key; // => 'Grace Hopper'
-//  woman['computer scientist'] // => ???
-//  Side Note: Who is Grace Hopper? She is one of the most influential people in the history of computer science and software engineering.
-//  Read more about her contribution to our field here. (https://en.wikipedia.org/wiki/Grace_Hopper)
+ woman["age"]; // => 85
+ woman.name; // => 'Grace Hopper'
+ woman['occupation']; // => 'computer scientist'
+ Side Note: Who is Grace Hopper? She is one of the most influential people in the history of computer science and software engineering.
+ Read more about her contribution to our field here. (https://en.wikipedia.org/wiki/Grace_Hopper)
 
 // 11.Write a function formatName that takes the person object that you created above (the first exercise at the top) as an argument, and returns your full name.
+function formatName(person){
+	return person.name.firstName + " " + person.name.lastName ;
+}
 
 // 12.Using these objects:
-//  var people = [
-//        {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
-//        {name: {first: 'Adele', last: 'Goldstine'}, age: 43},
-//        {name: {first: 'Ada', last: 'Lovelace'}, age: 36},
-//        {name: {first: 'Hedy', middle: 'E.', last: 'Lamarr'}, age: 85},
-//        {name: {first: 'Ruchi', last: 'Sanghvi'}, age: 34}
-//  ];
+ // var people = [
+ //       {name: {first: 'Grace', middle: 'B.', last: 'Hopper'}, age: 85},
+ //       {name: {first: 'Adele', last: 'Goldstine'}, age: 43},
+ //       {name: {first: 'Ada', last: 'Lovelace'}, age: 36},
+ //       {name: {first: 'Hedy', middle: 'E.', last: 'Lamarr'}, age: 85},
+ //       {name: {first: 'Ruchi', last: 'Sanghvi'}, age: 34}
+ // ];
 //  Add the object representing yourself (person) to this array of people (if your name key does not have the same 'shape' as the ones above,
 //  change it to look like these).
+people[5] = {name: {first: "Hamza", last: "Ouni"}, age :28};
 //  Write a function that, when passed people as an argument, returns an array of their full names. Can you use your formatName function here?
+function names(people){
+var str = people[0].name.first;
+	for (var i = 1 ; i < people.length ; i++){
+		str = str + " " +(people[i].name.first);
+}
+return str;
+}
 //  Write a function that finds the average age of the people array.
 //  Write a function that, when given people and an age as arguments, returns an array of just the people that are older than the specified age.
 //  Side Note: The women in the people array are all very famous. What did they do?
