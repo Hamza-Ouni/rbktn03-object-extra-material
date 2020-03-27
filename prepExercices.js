@@ -58,7 +58,7 @@ person.placeOfBirth = "Nabeul"
 var sunGlasses = {
 	"brand": "Ray-Ban",
 	"color": "black",
-	"rating": "5 star"
+	"rating": "5 star",
 	"price": "300€"
 }
 // 6.in the console,Create a new empty object in your console called obj like this:
@@ -153,7 +153,19 @@ function older(people, age){
 // 14.Write a function removeOddValues that takes an object as an argument and returns an object with all key/value pairs removed for which the value holds an odd number. You'll need to use the `typeof` operator to first check that the values are numbers. Try the below in your console:
 //  typeof 'Hello'
 //  typeof 3
-
+function removeOddValues(object){
+debugger;
+	for (var value in object){
+		if (typeof object[value] !== "number"){
+				delete object[value];
+        }
+			else if (typeof object[value] === "number" && object[value] % 2 !== 0 ){
+				delete object[value];
+			}
+		}
+	
+		return object;
+}
 // More Practice
 
 // 1.Write a function countWords that, when given a string as an argument, returns an object where keys are the words in the string, and values are the number of occurrences of that word within the string:
@@ -166,6 +178,10 @@ function older(people, age){
 //        Try 'Hello hello'.split(' ') at a console to see how it works.
 //        Modify countWords to be case insensitive by using the following string method (experiment at a console with it to learn its behavior):
 //        'HElLo'.toLowerCase(); // => ???
+
+function countWord(string){
+
+}
 
 // 2.Write a function countCharacters that, when given a string as an argument, returns an object containing counts of the occurrences of each character in the string.
 //  function countCharacters(s) {
